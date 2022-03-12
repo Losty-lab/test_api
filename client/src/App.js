@@ -1,13 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import {useDispatch, useSelector} from 'react-redux';
+import {sendMessage,selectMessage} from './Redux/Actions/indexAction'
+
 
 function App() {
+
+  const dispatch=useDispatch()
+  const messageResult=useSelector(selectMessage)
+
+  console.log('MESSAGERESULT',messageResult)
+
+  function sendMessageAction(){
+
+    dispatch(sendMessage())
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {messageResult.message}
         </p>
         <a
           className="App-link"
@@ -18,6 +33,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={sendMessageAction}>Receive Message</button>
     </div>
   );
 }
