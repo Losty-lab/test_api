@@ -2,7 +2,7 @@
 
 module.exports=(app)=>{
 
-    app.get("/api",(req,res)=>{
+    app.get("/",(req,res)=>{
         console.log('INSIDE REQ')
 
         //const userSend=JSON.stringify(userFake)
