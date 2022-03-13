@@ -22,7 +22,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {messageResult.message}
+          {messageResult.message} Test
         </p>
         <a
           className="App-link"
