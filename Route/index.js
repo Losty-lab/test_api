@@ -11,9 +11,9 @@ module.exports=(app)=>{
         res.status(200).send({message:"Hola"})
     })
 
-    app.get('*', (req,res)=>{
-        res.sendFile(path.join(__dirname + '/client/build/index.html'))
-    })
+    // app.get('*', (req,res)=>{
+    //     res.sendFile(path.join(__dirname + '/client/build/index.html'))
+    // })
 
 
 }
